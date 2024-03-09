@@ -1,0 +1,79 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter";
+}
+
+:root,
+body,
+main {
+  height: 100%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 2rem;
+}
+
+nav#navbar {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 2rem;
+}
+
+nav#navbar > ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+nav#navbar > ul > li.nav-item > a.nav-link {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+}
+
+nav#navbar > ul > li.nav-item > a.nav-link:hover {
+  text-decoration: underline dotted;
+}
+
+nav#navbar > ul > li.nav-item > a.nav-link-active {
+  text-decoration: underline;
+}
+
+nav#navbar > ul > li > i {
+  font-size: 1.5rem;
+  display: flex;
+  gap: 5px;
+}
+
+section#aboutme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+}
+
+section#aboutme > header {
+  font-size: 1.5rem;
+  flex: 1;
+}
+
+section#aboutme > footer {
+  flex: 1;
+}
+
+section#aboutme > header > h2 {
+  margin-block-end: 2rem;
+  text-transform: uppercase;
+}
+
+section#aboutme > footer.wrapper > p > img {
+  border-radius: 100%;
+  max-width: 256px;
+}
