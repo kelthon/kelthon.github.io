@@ -2,7 +2,15 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Inter";
+  font-family: "Montserrat";
+}
+
+:root {
+  --primary-color: #EE05F2;
+  --secondary-color: #8A038C;
+  --tertiary-color: #580259;
+  --light-color: #F2D5F2;
+  --dark-color: #0D0D0D;
 }
 
 :root,
@@ -16,6 +24,10 @@ main {
   flex-direction: column;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Inter";
+} 
+
 nav#navbar {
   display: flex;
   justify-content: space-between;
@@ -25,37 +37,44 @@ nav#navbar {
 nav#navbar > ul:is(#navbar-content, #navbar-options) {
   list-style: none;
   display: flex;
-  gap: 2rem;
   align-items: center;
+}
+
+nav#navbar > ul#navbar-content {
+  gap: 2rem;  
 }
 
 nav#navbar > ul#navbar-content > li.nav-item > a.nav-link {
   font-size: 1.5rem;
   text-transform: uppercase;
   text-decoration: none;
-  color: black;
+  color: var(--dark-color);
 }
 
 nav#navbar > ul#navbar-content > li.nav-item > a.nav-link-active {
   padding-block-end: 1px;
-  border-block-end: 0.1em solid black;
+  border-block-end: 0.1em solid var(--dark-color);
 }
 
 nav#navbar > ul#navbar-content > li.nav-item > a.nav-link:hover {
   padding-block-end: 1px;
-  border-block-end: 0.1em solid black;
+  border-block-end: 0.1em solid var(--dark-color);
+}
+
+nav#navbar > ul#navbar-options {
+  gap: 0.25rem;  
 }
 
 nav#navbar > ul#navbar-options > li.nav-item > i {
   font-size: 1.5rem;
   display: flex;
-  gap: 0.5rem;
+  gap: 5px;
   padding: 0.25rem;
 }
 
 nav#navbar > ul#navbar-options > li.nav-item > i:hover {
   border-radius: 100%;
-  background-color: lightgray;
+  color: var(--secondary-color);
 }
 
 section#aboutme {
@@ -75,6 +94,7 @@ section#aboutme > header {
 section#aboutme > header > h2 {
   margin-block-end: 2rem;
   text-transform: uppercase;
+  color: var(--secondary-color);
 }
 
 section#aboutme > footer.wrapper > p > img {
