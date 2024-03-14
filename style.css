@@ -45,7 +45,7 @@ nav#navbar > ul#navbar-content {
 }
 
 nav#navbar > ul#navbar-content > li.nav-item > a.nav-link {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
   text-decoration: none;
   color: var(--dark-color);
@@ -65,15 +65,27 @@ nav#navbar > ul#navbar-options {
   gap: 0.25rem;  
 }
 
-nav#navbar > ul#navbar-options > li.nav-item > i {
-  font-size: 1.5rem;
+nav#navbar > ul#navbar-options > li.nav-item {
   display: flex;
   gap: 5px;
   padding: 0.25rem;
 }
 
-nav#navbar > ul#navbar-options > li.nav-item > i:hover {
+nav#navbar > ul#navbar-options > li.nav-item > button {
+  border: none;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
   border-radius: 100%;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+nav#navbar > ul#navbar-options > li.nav-item > button > i {
+  font-size: 1.5rem;
+}
+
+nav#navbar > ul#navbar-options > li.nav-item > button:hover {
   color: var(--secondary-color);
 }
 
