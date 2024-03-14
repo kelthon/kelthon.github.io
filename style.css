@@ -11,6 +11,8 @@
   --tertiary-color: #580259;
   --light-color: #F2D5F2;
   --dark-color: #0D0D0D;
+  --danger-color: red;
+
 }
 
 :root,
@@ -112,4 +114,41 @@ section#aboutme > header > h2 {
 section#aboutme > footer.wrapper > p > img {
   border-radius: 100%;
   max-width: 256px;
+}
+
+aside.warning-banner {
+  display: flex;
+  padding: 1rem 2rem;
+  color: var(--light-color);
+  background-color: var(--tertiary-color);
+}
+
+aside.warning-banner > article.banner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+aside.warning-banner > article.banner > h2.banner-title {
+  font-size: 1.2rem;
+}
+
+aside.warning-banner > footer.banner-control > button {
+  border: none;
+  color: var(--light-color);
+  background-color: transparent;
+}
+aside.warning-banner > footer.banner-control > button > i {
+  font-size: 1.5rem;
+  border-radius: 1rem;
+}
+
+aside.warning-banner > footer.banner-control > button > i:hover {
+  background-color: var(--light-color);
+  color: var(--tertiary-color);
+}
+
+aside.warning-banner > footer.banner-control > button > i:active {
+  background-color: var(--danger-color);
+  color: var(--light-color);
 }
