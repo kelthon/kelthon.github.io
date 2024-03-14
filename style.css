@@ -14,41 +14,48 @@ main {
 main {
   display: flex;
   flex-direction: column;
-  padding-inline: 2rem;
 }
 
 nav#navbar {
   display: flex;
   justify-content: space-between;
-  padding-block: 2rem;
+  padding: 2rem;
 }
 
-nav#navbar > ul {
+nav#navbar > ul:is(#navbar-content, #navbar-options) {
   list-style: none;
   display: flex;
   gap: 2rem;
   align-items: center;
 }
 
-nav#navbar > ul > li.nav-item > a.nav-link {
+nav#navbar > ul#navbar-content > li.nav-item > a.nav-link {
   font-size: 1.5rem;
   text-transform: uppercase;
   text-decoration: none;
   color: black;
 }
 
-nav#navbar > ul > li.nav-item > a.nav-link:hover {
-  text-decoration: underline dotted;
+nav#navbar > ul#navbar-content > li.nav-item > a.nav-link-active {
+  padding-block-end: 1px;
+  border-block-end: 0.1em solid black;
 }
 
-nav#navbar > ul > li.nav-item > a.nav-link-active {
-  text-decoration: underline;
+nav#navbar > ul#navbar-content > li.nav-item > a.nav-link:hover {
+  padding-block-end: 1px;
+  border-block-end: 0.1em solid black;
 }
 
-nav#navbar > ul > li > i {
+nav#navbar > ul#navbar-options > li.nav-item > i {
   font-size: 1.5rem;
   display: flex;
-  gap: 5px;
+  gap: 0.5rem;
+  padding: 0.25rem;
+}
+
+nav#navbar > ul#navbar-options > li.nav-item > i:hover {
+  border-radius: 100%;
+  background-color: lightgray;
 }
 
 section#aboutme {
@@ -57,15 +64,12 @@ section#aboutme {
   align-items: center;
   gap: 1rem;
   flex: 1;
+  padding-inline: 2rem;
 }
 
 section#aboutme > header {
   font-size: 1.5rem;
-  flex: 1;
-}
-
-section#aboutme > footer {
-  flex: 1;
+  max-width: 50%;
 }
 
 section#aboutme > header > h2 {
