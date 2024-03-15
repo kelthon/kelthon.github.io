@@ -154,3 +154,22 @@ aside.warning-banner > footer.banner-control > button > i:active {
   background-color: var(--danger-color);
   color: var(--light-color);
 }
+
+@media screen and (max-width: 599px) {
+  nav#navbar, nav#navbar > ul {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  nav#navbar > ul#navbar-options {
+    gap: 2rem;
+  }
+
+  section#aboutme {
+    flex-flow: column;
+  }
+  
+  section#aboutme > header {
+    max-width: none;
+  }
+}
