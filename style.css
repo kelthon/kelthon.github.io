@@ -118,9 +118,11 @@ section#aboutme > footer.wrapper > p > img {
 
 aside.warning-banner {
   display: flex;
+  justify-content: space-between;
   padding: 1rem 2rem;
   color: var(--light-color);
   background-color: var(--tertiary-color);
+  border-bottom: 1px solid  var(--light-color);
 }
 
 aside.warning-banner > article.banner {
