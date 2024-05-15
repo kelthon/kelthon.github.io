@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Montserrat, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  --primary-color: #EE05F2;
+  --secondary-color: #8A038C;
+  --tertiary-color: #580259;
+  --light-color: #F2D5F2;
+  --dark-color: #0D0D0D;
+  --danger-color: red;
+}
