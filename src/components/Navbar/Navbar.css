@@ -1,0 +1,68 @@
+nav#navbar > ul.nb-items {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  padding: 2em;
+}
+
+nav#navbar > ul.nb-items > li.nb-item > ul.nb-group {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 1em;
+}
+
+nav#navbar > ul.nb-items > li.nb-item > ul.nb-group > li.nb-g-item > a.nb-link {
+  font-size: 1.2rem;
+  color: var(--dark-color);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+nav#navbar
+  > ul.nb-items
+  > li.nb-item:first-child
+  > ul.nb-group
+  > li:is(.nb-g-item:hover, .nb-selected) {
+  border-block-end: 2px solid var(--dark-color);
+}
+
+nav#navbar
+  > ul.nb-items
+  > li.nb-item:first-child
+  > ul.nb-group
+  > li.nb-g-item:hover {
+  border-color: var(--secondary-color);
+}
+
+nav#navbar > ul.nb-items > li.nb-item > ul.nb-group > li.nb-g-item {
+  display: flex;
+  align-items: center;
+}
+
+nav#navbar
+  > ul.nb-items
+  > li.nb-item
+  > ul.nb-group
+  > li.nb-g-item
+  > :is(button, select) {
+  display: flex;
+  border: none;
+  background-color: transparent;
+}
+
+nav#navbar
+  > ul.nb-items
+  > li.nb-item
+  > ul.nb-group
+  > li.nb-g-item:hover
+  > :is(button, select, svg) {
+  color: var(--secondary-color);
+}
+
+nav#navbar > ul.nb-items > li.nb-item > ul.nb-group > li.nb-g-item > select {
+  text-transform: uppercase;
+  appearance: none;
+  outline: none;
+  padding-inline: 0.5rem;
+}
