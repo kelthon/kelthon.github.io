@@ -1,7 +1,19 @@
-import { RiEarthLine, RiMenuFill, RiSunLine } from '@remixicon/react';
+import {
+  RiEarthLine,
+  RiMenuFill,
+  RiSunFill,
+  RiMoonLine,
+} from '@remixicon/react';
 import './Navbar.css';
+import { useState } from 'react';
 
 function Navbar(): JSX.Element {
+  const [useLightTheme, setThemeIcon] = useState<boolean>(true);
+
+  const changeThemeColor = () => {
+    setThemeIcon(!useLightTheme);
+  };
+
   return (
     <nav id="navbar">
       <ul className="nb-items">
@@ -36,8 +48,12 @@ function Navbar(): JSX.Element {
               </button>
             </li>
             <li className="nb-g-item">
-              <button type="button" aria-label="change color theme">
-                <RiSunLine />
+              <button
+                type="button"
+                aria-label="change color theme"
+                onClick={changeThemeColor}
+              >
+                {useLightTheme ? <RiMoonLine /> : <RiSunFill />}
               </button>
             </li>
             <li className="nb-g-item">
