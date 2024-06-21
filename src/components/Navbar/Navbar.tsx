@@ -1,4 +1,4 @@
-import { RiEarthLine, RiSunLine } from '@remixicon/react';
+import { RiEarthLine, RiMenu2Fill, RiMenuFill, RiSunLine } from '@remixicon/react';
 import './Navbar.css';
 
 function Navbar(): JSX.Element {
@@ -26,6 +26,15 @@ function Navbar(): JSX.Element {
         </li>
         <li className="nb-item">
           <ul className="nb-group">
+            <li id="navbar-toggle" className="nb-g-item">
+              <button
+                id="navbar-toggle-btn"
+                type="button"
+                aria-label="toggle navbar"
+              >
+                <RiMenuFill />
+              </button>
+            </li>
             <li className="nb-g-item">
               <button type="button" aria-label="change color theme">
                 <RiSunLine />
