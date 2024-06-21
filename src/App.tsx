@@ -1,5 +1,6 @@
 import './App.css';
 import Message from './components/Message/Message';
+import Navbar from './components/Navbar/Navbar';
 import { ThemeProvider } from './hooks/theme';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
           any inconvenience and thank you for your patience. Thanks for the
           visit! Thank you for visiting!"
       />
+      <Navbar />
     </ThemeProvider>
   );
 }
