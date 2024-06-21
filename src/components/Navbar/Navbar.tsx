@@ -1,4 +1,4 @@
-import { RiEarthLine, RiMenu2Fill, RiMenuFill, RiSunLine } from '@remixicon/react';
+import { RiEarthLine, RiMenuFill, RiSunLine } from '@remixicon/react';
 import './Navbar.css';
 
 function Navbar(): JSX.Element {
