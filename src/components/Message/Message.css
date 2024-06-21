@@ -35,3 +35,9 @@ aside.message > footer.msg-control > button.msg-close-btn > svg:active {
   background-color: var(--danger-color);
   color: var(--light-color);
 }
+
+@media screen and (max-width: 768px) {
+  aside.message {
+    padding: 1rem;
+  }
+}
