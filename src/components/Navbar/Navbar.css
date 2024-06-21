@@ -2,14 +2,18 @@ nav#navbar > ul.nb-items {
   display: flex;
   list-style: none;
   justify-content: space-between;
-  padding: 2em;
+  padding: 2rem;
 }
 
 nav#navbar > ul.nb-items > li.nb-item > ul.nb-group {
   display: flex;
   list-style: none;
   align-items: center;
-  gap: 1em;
+  gap: 1rem;
+}
+
+nav#navbar > ul.nb-items > li.nb-item > ul.nb-group > li#navbar-toggle {
+  display: none;
 }
 
 nav#navbar > ul.nb-items > li.nb-item > ul.nb-group > li.nb-g-item > a.nb-link {
@@ -65,4 +69,26 @@ nav#navbar > ul.nb-items > li.nb-item > ul.nb-group > li.nb-g-item > select {
   appearance: none;
   outline: none;
   padding-inline: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  nav#navbar > ul.nb-items {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 2rem;
+  }
+
+  nav#navbar > ul.nb-items > li.nb-item > ul.nb-group > li#navbar-toggle {
+    display: block;
+    flex: 1;
+  }
+
+  nav#navbar > ul.nb-items > li.nb-item:first-child {
+    order: 1;
+  }
+
+  nav#navbar > ul.nb-items > li.nb-item:first-child > ul.nb-group {
+    flex-direction: column;
+    gap: 2rem;
+  }
 }
