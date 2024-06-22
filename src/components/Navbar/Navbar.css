@@ -12,10 +12,6 @@ nav#navbar > ul.nb-items > li.nb-item > ul.nb-group {
   gap: 1rem;
 }
 
-nav#navbar > ul.nb-items > li.nb-item > ul.nb-group > li#navbar-toggle {
-  display: none;
-}
-
 nav#navbar > ul.nb-items > li.nb-item > ul.nb-group > li.nb-g-item > a.nb-link {
   font-size: 1.2rem;
   color: var(--dark-color);
@@ -25,7 +21,7 @@ nav#navbar > ul.nb-items > li.nb-item > ul.nb-group > li.nb-g-item > a.nb-link {
 
 nav#navbar
   > ul.nb-items
-  > li.nb-item:first-child
+  > li.nb-item#navbar-hidden-menu
   > ul.nb-group
   > li:is(.nb-g-item:hover, .nb-selected) {
   border-block-end: 2px solid var(--dark-color);
@@ -33,7 +29,7 @@ nav#navbar
 
 nav#navbar
   > ul.nb-items
-  > li.nb-item:first-child
+  > li.nb-item#navbar-hidden-menu
   > ul.nb-group
   > li.nb-g-item:hover {
   border-color: var(--secondary-color);
@@ -83,11 +79,11 @@ nav#navbar > ul.nb-items > li.nb-item > ul.nb-group > li.nb-g-item > select {
     flex: 1;
   }
 
-  nav#navbar > ul.nb-items > li.nb-item:first-child {
+  nav#navbar > ul.nb-items > li.nb-item#navbar-hidden-menu {
     order: 1;
   }
 
-  nav#navbar > ul.nb-items > li.nb-item:first-child > ul.nb-group {
+  nav#navbar > ul.nb-items > li.nb-item#navbar-hidden-menu > ul.nb-group {
     flex-direction: column;
     gap: 2rem;
   }

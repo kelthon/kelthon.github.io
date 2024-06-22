@@ -5,11 +5,23 @@ import {
   RiMoonLine,
 } from '@remixicon/react';
 import './Navbar.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function Navbar(): JSX.Element {
   const [useLightTheme, setThemeIcon] = useState<boolean>(true);
-  const [showMenu, setShowMenu] = useState<boolean>(false);
+  const [showMenu, setShowMenu] = useState<boolean>(window.innerWidth > 768);
+  const [showToggleMenuBtn, setShowToggleMenuBtn] = useState<boolean>(
+    window.innerWidth <= 768,
+  );
+
+  useEffect(
+    () =>
+      window.addEventListener('resize', () => {
+        setShowToggleMenuBtn(window.innerWidth <= 768);
+        setShowMenu(window.innerWidth > 768);
+      }),
+    [],
+  );
 
   const changeThemeColor = () => setThemeIcon(!useLightTheme);
   const toggleMenu = () => setShowMenu(!showMenu);
@@ -17,9 +29,9 @@ function Navbar(): JSX.Element {
   return (
     <nav id="navbar">
       <ul className="nb-items">
-        <li className="nb-item">
-          {showMenu && (
-            <ul id="navbar-menu" className="nb-group">
+        {showMenu && (
+          <li id="navbar-hidden-menu" className="nb-item">
+            <ul className="nb-group">
               <li className="nb-g-item nb-selected">
                 <a className="nb-link" href="#about">
                   about me
@@ -36,20 +48,22 @@ function Navbar(): JSX.Element {
                 </a>
               </li>
             </ul>
-          )}
-        </li>
+          </li>
+        )}
         <li className="nb-item">
           <ul className="nb-group">
-            <li id="navbar-toggle" className="nb-g-item">
-              <button
-                id="navbar-toggle-btn"
-                type="button"
-                aria-label="toggle navbar"
-                onClick={toggleMenu}
-              >
-                <RiMenuFill />
-              </button>
-            </li>
+            {showToggleMenuBtn && (
+              <li id="navbar-toggle" className="nb-g-item">
+                <button
+                  id="navbar-toggle-btn"
+                  type="button"
+                  aria-label="toggle navbar"
+                  onClick={toggleMenu}
+                >
+                  <RiMenuFill />
+                </button>
+              </li>
+            )}
             <li className="nb-g-item">
               <button
                 type="button"
