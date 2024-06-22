@@ -9,32 +9,34 @@ import { useState } from 'react';
 
 function Navbar(): JSX.Element {
   const [useLightTheme, setThemeIcon] = useState<boolean>(true);
+  const [showMenu, setShowMenu] = useState<boolean>(false);
 
-  const changeThemeColor = () => {
-    setThemeIcon(!useLightTheme);
-  };
+  const changeThemeColor = () => setThemeIcon(!useLightTheme);
+  const toggleMenu = () => setShowMenu(!showMenu);
 
   return (
     <nav id="navbar">
       <ul className="nb-items">
         <li className="nb-item">
-          <ul className="nb-group">
-            <li className="nb-g-item nb-selected">
-              <a className="nb-link" href="#about">
-                about me
-              </a>
-            </li>
-            <li className="nb-g-item">
-              <a className="nb-link" href="#projects">
-                projects
-              </a>
-            </li>
-            <li className="nb-g-item">
-              <a className="nb-link" href="#contact">
-                contact
-              </a>
-            </li>
-          </ul>
+          {showMenu && (
+            <ul id="navbar-menu" className="nb-group">
+              <li className="nb-g-item nb-selected">
+                <a className="nb-link" href="#about">
+                  about me
+                </a>
+              </li>
+              <li className="nb-g-item">
+                <a className="nb-link" href="#projects">
+                  projects
+                </a>
+              </li>
+              <li className="nb-g-item">
+                <a className="nb-link" href="#contact">
+                  contact
+                </a>
+              </li>
+            </ul>
+          )}
         </li>
         <li className="nb-item">
           <ul className="nb-group">
@@ -43,6 +45,7 @@ function Navbar(): JSX.Element {
                 id="navbar-toggle-btn"
                 type="button"
                 aria-label="toggle navbar"
+                onClick={toggleMenu}
               >
                 <RiMenuFill />
               </button>
