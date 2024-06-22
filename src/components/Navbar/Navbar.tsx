@@ -33,7 +33,7 @@ function Navbar(): JSX.Element {
           <li id="navbar-hidden-menu" className="nb-item">
             <ul className="nb-group">
               <li className="nb-g-item nb-selected">
-                <a className="nb-link" href="#about">
+                <a className="nb-link" href="#about-me">
                   about me
                 </a>
               </li>
