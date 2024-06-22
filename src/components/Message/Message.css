@@ -39,5 +39,10 @@ aside.message > footer.msg-control > button.msg-close-btn > svg:active {
 @media screen and (max-width: 768px) {
   aside.message {
     padding: 1rem;
+    font-size: 0.75rem;
+  }
+
+  aside.message > article.msg-content > h2.msg-title {
+    font-size: 1rem;
   }
 }
