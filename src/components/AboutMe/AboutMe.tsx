@@ -1,7 +1,18 @@
+import { useEffect, useState } from 'react';
 import FallbackImage from '../FallbackImage/FallbackImage';
 import './AboutMe.css';
 
+function handleImageSize() {
+  return `${window.innerWidth < 768 ? 192 : 256}px`;
+}
+
 function AboutMeSection(): JSX.Element {
+  const [imageSize, setImageSize] = useState<string>(handleImageSize());
+
+  useEffect(() => {
+    window.addEventListener('resize', () => setImageSize(handleImageSize()));
+  }, []);
+
   return (
     <section id="about-me">
       <header>
@@ -21,8 +32,8 @@ function AboutMeSection(): JSX.Element {
           <FallbackImage
             src="/photo.webp"
             alt="Kelthon's profile photo"
-            width="256px"
-            height="256px"
+            width={imageSize}
+            height={imageSize}
             radius="100%"
             iconSize="2.5rem"
             backgroundColor="#ccc"
