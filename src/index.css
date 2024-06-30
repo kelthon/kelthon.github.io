@@ -1,10 +1,13 @@
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 :root {
+  scroll-behavior: smooth;
   font-family: Montserrat, sans-serif;
 
   --primary-color: #EE05F2;
@@ -15,10 +18,11 @@
   --danger-color: red;
 }
 
-:root, body, div#root {
-  height: 100%;
-}
-
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: Inter, sans-serif;
 }
