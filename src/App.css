@@ -1,5 +1,11 @@
 main {
-  height: 100%;
+  display: flex;
+  overflow-y: scroll;
+  flex-direction: column;
+}
+
+main > div.container {
+  height: 100vh;
   display: flex;
   flex-direction: column;
 }
