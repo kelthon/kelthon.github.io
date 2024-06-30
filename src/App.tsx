@@ -3,6 +3,7 @@ import AboutMeSection from './components/AboutMe/AboutMe';
 import Message from './components/Message/Message';
 import Navbar from './components/Navbar/Navbar';
 import { ThemeProvider } from './hooks/theme';
+import Projects from './components/Portfolio/Portfolio';
 import { messages } from './data/data';
 
 function App() {
@@ -15,6 +16,9 @@ function App() {
           </aside>
           <Navbar />
           <AboutMeSection />
+        </div>
+        <div className="container">
+          <Projects />
         </div>
       </main>
     </ThemeProvider>
