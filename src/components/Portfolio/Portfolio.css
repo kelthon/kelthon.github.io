@@ -1,0 +1,32 @@
+section#projects {
+  height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+section#projects > :is(ol, ul) {
+  font-size: 1.5em;
+  font-family: Montserrat;
+  padding-inline-start: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex: 1;
+}
+
+section#projects > header > h2 {
+  font-size: 2.25em;
+  font-weight: 600;
+}
+
+section#projects > :is(ol, ul) > li > h3 > a {
+  font-weight: 400;
+  text-decoration: none;
+  color: var(--dark-color);
+}
+
+section#projects > :is(ol, ul) > li > h3 > a:hover {
+  color: var(--secondary-color);
+}
