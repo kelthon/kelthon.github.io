@@ -1,0 +1,30 @@
+{
+    "version": "0.2",
+    "language": "en,pt,pt_BR",
+    "ignorePaths": [
+        "node_modules",
+        "package-lock.json"
+    ],
+    "dictionaryDefinitions": [],
+    "dictionaries": [
+        "companies",
+        "softwareTerms",
+        "misc",
+        "node",
+        "npm",
+        "typescript",
+        "html",
+        "css",
+        "fonts",
+        "filetypes"
+    ],
+    "words": [
+        "kelthon",
+        "remixicon",
+        "ecommerce",
+        "iconify",
+        "navs"
+    ],
+    "ignoreWords": [],
+    "import": ["@cspell/dict-pt-br"]
+}
