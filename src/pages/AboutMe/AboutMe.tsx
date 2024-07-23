@@ -1,5 +1,5 @@
+import FallbackImage from '@components/images/FallbackImage/FallbackImage';
 import { useEffect, useState } from 'react';
-import FallbackImage from '../FallbackImage/FallbackImage';
 import './AboutMe.css';
 
 function handleImageSize() {

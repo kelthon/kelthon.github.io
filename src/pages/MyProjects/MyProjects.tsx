@@ -1,7 +1,7 @@
-import './Portfolio.css';
-import { projects } from '../../data/data';
+import { projects } from '@services/data';
+import './MyProjects.css';
 
-function Projects() {
+function MyProjects() {
   const projectList = projects.map((project) => {
     return (
       <li key={project.id}>
@@ -13,7 +13,7 @@ function Projects() {
   });
 
   return (
-    <section id="projects">
+    <section id="my-projects">
       <header>
         <h2>Featured Projects</h2>
       </header>
@@ -22,4 +22,4 @@ function Projects() {
   );
 }
 
-export default Projects;
+export default MyProjects;

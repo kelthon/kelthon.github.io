@@ -1,10 +1,13 @@
+import Message from '@components/cards/Message/Message';
+import Navbar from '@components/navs/Navbar/Navbar';
+import { messages } from '@services/data';
+import { ThemeProvider } from '@hooks/theme';
+import { LanguageProvider } from '@hooks/language';
+import AboutMeSection from '@pages/AboutMe/AboutMe';
+import Projects from '@pages/MyProjects/MyProjects';
+import { ColorScheme, Language } from '@utils/properties';
+import { useState } from 'react';
 import './App.css';
-import AboutMeSection from './components/AboutMe/AboutMe';
-import Message from './components/Message/Message';
-import Navbar from './components/Navbar/Navbar';
-import { ThemeProvider } from './hooks/theme';
-import Projects from './components/Portfolio/Portfolio';
-import { messages } from './data/data';
 
 function App() {
   return (
