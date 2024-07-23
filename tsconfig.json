@@ -23,16 +23,21 @@
     /* Aliases */
     "baseUrl": "./src",
     "paths": {
-      "@/*": ["./*"],
-      "@components/*": ["components/*"],
       "@config/*": ["config/*"],
-      "@constants/*": ["constants/*"],
+      "@components/*": ["components/*"],
       "@hooks/*": ["hooks/*"],
       "@pages/*": ["pages/*"],
-      "@styles/*": ["styles/*"],
       "@services/*": ["services/*"],
+      "@styles/*": ["styles/*"],
       "@types/*": ["types/*"],
-      "@utils/*": ["utils/*"]
+      "@utils/*": ["utils/*"],
+      
+      /* Components */
+      "@buttons/*": ["components/buttons/*"], 
+      "@cards/*": ["components/cards/*"], 
+      "@images/*": ["components/images/*"], 
+      "@navs/*": ["components/navs/*"], 
+      "@selects/*": ["components/selects/*"], 
     }
   },
   "include": ["src"],
