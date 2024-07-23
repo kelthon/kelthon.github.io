@@ -1,5 +1,5 @@
+import { ColorScheme, ThemeObject, ThemeProviderProps } from '@utils/properties';
 import React from 'react';
-import { ColorScheme, ThemeObject, ThemeProviderProps } from '../utils/properties';
 
 const ThemeContext = React.createContext<ThemeObject>({
   theme: ColorScheme.Light,
