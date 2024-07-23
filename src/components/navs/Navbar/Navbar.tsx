@@ -1,93 +1,48 @@
-import {
-  RiEarthLine,
-  RiMenuFill,
-  RiSunLine,
-  RiMoonFill,
-} from '@remixicon/react';
+import { MenuProvider } from '@hooks/menu';
+import ActionsMenu from '@navs/ActionsMenu/ActionsMenu';
+import Menu from '@navs/Menu/Menu';
+import { WindowBreakSize } from '@utils/constants';
+import { isWindowLessThan } from '@utils/functions';
+import { MenuOptions } from '@utils/properties';
+import { useEffect, useRef, useState } from 'react';
 import './Navbar.css';
-import { useEffect, useState } from 'react';
 
 function Navbar(): JSX.Element {
-  const [useLightTheme, setThemeIcon] = useState<boolean>(true);
-  const [showMenu, setShowMenu] = useState<boolean>(window.innerWidth > 768);
-  const [showToggleMenuBtn, setShowToggleMenuBtn] = useState<boolean>(
-    window.innerWidth <= 768,
-  );
+  const windowMustBeBreak = useRef<boolean>(isWindowLessThan(WindowBreakSize));
+  const [menu, setMenu] = useState<MenuOptions>({
+    showMenu: !windowMustBeBreak.current,
+    isCollapsed: windowMustBeBreak.current,
+  });
 
-  useEffect(
-    () =>
-      window.addEventListener('resize', () => {
-        setShowToggleMenuBtn(window.innerWidth <= 768);
-        setShowMenu(window.innerWidth > 768);
-      }),
-    [],
-  );
+  useEffect(() => {
+    window.addEventListener('resize', () => {
+      if (
+        (!windowMustBeBreak.current && isWindowLessThan(WindowBreakSize)) ||
+        (windowMustBeBreak.current && !isWindowLessThan(WindowBreakSize))
+      ) {
+        windowMustBeBreak.current = isWindowLessThan(WindowBreakSize);
 
-  const changeThemeColor = () => setThemeIcon(!useLightTheme);
-  const toggleMenu = () => setShowMenu(!showMenu);
+        setMenu({
+          showMenu: !windowMustBeBreak.current,
+          isCollapsed: windowMustBeBreak.current,
+        });
+      }
+    });
+  });
 
   return (
-    <nav id="navbar">
-      <ul className="nb-items">
-        {showMenu && (
+    <MenuProvider value={{ menu, setMenu }}>
+      <nav id="navbar">
+        <ul className="nb-items">
           <li id="navbar-hidden-menu" className="nb-item">
-            <ul className="nb-group">
-              <li className="nb-g-item nb-selected">
-                <a className="nb-link" href="#about-me">
-                  about me
-                </a>
-              </li>
-              <li className="nb-g-item">
-                <a className="nb-link" href="#projects">
-                  projects
-                </a>
-              </li>
-              <li className="nb-g-item">
-                <a className="nb-link" href="#contact">
-                  contact
-                </a>
-              </li>
-            </ul>
+            <Menu />
           </li>
-        )}
-        <li className="nb-item">
-          <ul className="nb-group">
-            {showToggleMenuBtn && (
-              <li id="navbar-toggle" className="nb-g-item">
-                <button
-                  id="navbar-toggle-btn"
-                  type="button"
-                  aria-label="toggle navbar"
-                  onClick={toggleMenu}
-                >
-                  <RiMenuFill />
-                </button>
-              </li>
-            )}
-            <li className="nb-g-item">
-              <button
-                type="button"
-                aria-label="change color theme"
-                onClick={changeThemeColor}
-              >
-                {useLightTheme ? <RiSunLine /> : <RiMoonFill />}
-              </button>
-            </li>
-            <li className="nb-g-item">
-              <RiEarthLine />
-              <select
-                name="page-language"
-                id="nb-change-language"
-                aria-label="change page language"
-              >
-                <option value="en">en</option>
-                <option value="pt-br">pt-br</option>
-              </select>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
+          <li className="nb-item">
+            <ActionsMenu />
+          </li>
+        </ul>
+      </nav>
+    </MenuProvider>
   );
 }
 

@@ -1,4 +1,4 @@
-import FallbackImage from '@components/images/FallbackImage/FallbackImage';
+import FallbackImage from '@images/FallbackImage/FallbackImage';
 import { useEffect, useState } from 'react';
 import './AboutMe.css';
 
