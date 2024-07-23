@@ -1,27 +1,17 @@
-import {
-  RefObject,
-  ReactNode,
-  createContext,
-  createRef,
-  useContext,
-} from 'react';
+import React from 'react';
+import { ColorScheme, ThemeObject, ThemeProviderProps } from '../utils/properties';
 
-export interface ThemeProps {
-  children?: ReactNode;
-}
+const ThemeContext = React.createContext<ThemeObject>({
+  theme: ColorScheme.Light,
+  setTheme: () => {},
+});
 
-export type ColorScheme = 'dark' | 'light';
-
-const themeRef = createRef<ColorScheme>();
-
-export const ThemeContext = createContext<RefObject<ColorScheme>>(themeRef);
-
-export function ThemeProvider({ children }: ThemeProps) {
+export function ThemeProvider({ value, children }: ThemeProviderProps) {
   return (
-    <ThemeContext.Provider value={themeRef}>{children}</ThemeContext.Provider>
+    <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
   );
 }
 
 export default function useTheme() {
-  return useContext(ThemeContext);
+  return React.useContext(ThemeContext);
 }
