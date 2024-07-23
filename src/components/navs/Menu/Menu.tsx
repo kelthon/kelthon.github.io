@@ -13,12 +13,12 @@ function Menu(): JSX.Element {
             </a>
           </li>
           <li className="nb-g-item">
-            <a className="nb-link" href="#projects">
+            <a className="nb-link" href="#my-projects">
               projects
             </a>
           </li>
           <li className="nb-g-item">
-            <a className="nb-link" href="#contact">
+            <a className="nb-link" href="#contact-me">
               contact
             </a>
           </li>
