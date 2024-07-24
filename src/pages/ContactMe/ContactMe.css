@@ -1,0 +1,57 @@
+section#contact-me {
+  height: 100%;
+  padding-inline: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+}
+
+section#contact-me > h2 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  vertical-align: center;
+}
+
+section#contact-me > div.container {
+  flex: 0.8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section#contact-me > div.container > div.contact-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+}
+
+section#contact-me > div.container > div.contact-list > p.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 0.5rem;
+}
+
+section#contact-me > div.container > div.contact-list > p.wrapper > a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-family: Inter;
+  font-size: 1.5rem;
+}
+
+section#contact-me > div.container > div.contact-list > p.wrapper > svg {
+  width: 3rem;
+  height: 3rem;
+}
+
+section#contact-me
+  > div.container
+  > div.contact-list
+  > p.wrapper:hover
+  > :is(svg, a) {
+  color: var(--secondary-color);
+}

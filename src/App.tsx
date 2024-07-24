@@ -8,6 +8,7 @@ import { messages } from '@services/data';
 import { ColorScheme, Language } from '@utils/properties';
 import { useState } from 'react';
 import './App.css';
+import ContactMe from '@pages/ContactMe/ContactMe';
 
 function App() {
   const [theme, setTheme] = useState<ColorScheme>(ColorScheme.Light);
@@ -29,6 +30,9 @@ function App() {
           </div>
           <div className="container">
             <Projects />
+          </div>
+          <div className="container">
+            <ContactMe />
           </div>
         </main>
       </LanguageProvider>
