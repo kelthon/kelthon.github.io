@@ -19,13 +19,17 @@
         "filetypes"
     ],
     "words": [
-        "kelthon",
-        "remixicon",
+        "alves",
         "ecommerce",
         "iconify",
-        "webchat",
-        "navs"
+        "kelthon",
+        "linkedin",
+        "navs",
+        "remixicon",
+        "webchat"
     ],
     "ignoreWords": [],
-    "import": ["@cspell/dict-pt-br"]
+    "import": [
+        "@cspell/dict-pt-br"
+    ]
 }
