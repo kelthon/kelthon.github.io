@@ -10,19 +10,19 @@ export const projects: Project[] = [
     id: 1,
     title: 'Ecommerce UI',
     description: 'A landing page of a ecommerce inspired a public template',
-    url: 'https://github.com/kelthon/ecommerce-ui',
+    url: 'https://github.com/kelthon/e-commerce',
   },
   {
     id: 2,
     title: 'Furniture Ecommerce (API)',
     description: 'A complete back end for a ecommerce app',
-    url: 'https://github.com/kelthon/ecommerce-api',
+    url: 'https://github.com/kelthon/ecommerce-challenge-api',
   },
   {
     id: 3,
     title: 'Furniture Ecommerce (APP)',
     description: 'A complete front end for a ecommerce app',
-    url: 'https://github.com/kelthon/ecommerce-app',
+    url: 'https://github.com/kelthon/ecommerce-challenge-app',
   },
   {
     id: 4,
