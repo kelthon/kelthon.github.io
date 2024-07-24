@@ -1,4 +1,4 @@
-aside.message {
+section.message {
   display: flex;
   padding: 1rem 2rem;
   color: var(--light-color);
@@ -7,42 +7,42 @@ aside.message {
   border-bottom: 1px solid var(--light-color);
 }
 
-aside.message > article.msg-content {
+section.message > article.msg-content {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-aside.message > article.msg-content > h2.msg-title {
+section.message > article.msg-content > h2.msg-title {
   font-size: 1.2rem;
 }
 
-aside.message > footer.msg-control > button.msg-close-btn {
+section.message > footer.msg-control > button.msg-close-btn {
   border: none;
   color: var(--light-color);
   background-color: transparent;
 }
-aside.message > footer.msg-control > button.msg-close-btn > svg {
+section.message > footer.msg-control > button.msg-close-btn > svg {
   border-radius: 1rem;
 }
 
-aside.message > footer.msg-control > button.msg-close-btn > svg:hover {
+section.message > footer.msg-control > button.msg-close-btn > svg:hover {
   background-color: var(--light-color);
   color: var(--tertiary-color);
 }
 
-aside.message > footer.msg-control > button.msg-close-btn > svg:active {
+section.message > footer.msg-control > button.msg-close-btn > svg:active {
   background-color: var(--danger-color);
   color: var(--light-color);
 }
 
 @media screen and (max-width: 768px) {
-  aside.message {
+  section.message {
     padding: 1rem;
     font-size: 0.75rem;
   }
 
-  aside.message > article.msg-content > h2.msg-title {
+  section.message > article.msg-content > h2.msg-title {
     font-size: 1rem;
   }
 }

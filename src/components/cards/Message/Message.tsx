@@ -12,7 +12,7 @@ function Message({ title, message }: MessageProps) {
 
   return (
     showMessage && (
-      <aside className="message">
+      <section className="message">
         <article className="msg-content">
           <h2 className="msg-title">{title}</h2>
           <p className="msg-description">{message}</p>
@@ -27,7 +27,7 @@ function Message({ title, message }: MessageProps) {
             <RiCloseFill />
           </button>
         </footer>
-      </aside>
+      </section>
     )
   );
 }

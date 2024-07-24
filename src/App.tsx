@@ -18,7 +18,7 @@ function App() {
       <LanguageProvider value={{ language, setLanguage }}>
         <main>
           <div className="container">
-            <aside>
+            <aside className='messages'>
               <Message
                 title={messages[0].title}
                 message={messages[0].message!}
