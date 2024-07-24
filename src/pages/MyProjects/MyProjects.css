@@ -1,32 +1,72 @@
-section#projects {
+section#my-projects {
   height: 100vh;
-  padding: 2rem;
+  padding-inline: 2rem;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+}
+
+section#my-projects > ol.project-list {
+  list-style: none;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
   gap: 2rem;
 }
 
-section#projects > :is(ol, ul) {
-  font-size: 1.5em;
-  font-family: Montserrat;
-  padding-inline-start: 2rem;
+section#my-projects > ol.project-list > li {
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+section#my-projects > ol.project-list > li.pl-project-item > span {
+  font-weight: 700;
+  font-size: 3.75em;
+  font-family: Inter;
+}
+
+section#my-projects > ol.project-list > li.pl-project-item > a.pl-pi-link {
   flex: 1;
-}
-
-section#projects > header > h2 {
-  font-size: 2.25em;
-  font-weight: 600;
-}
-
-section#projects > :is(ol, ul) > li > h3 > a {
+  font-size: 1rem;
   font-weight: 400;
   text-decoration: none;
-  color: var(--dark-color);
+  color: var(--text-color);
 }
 
-section#projects > :is(ol, ul) > li > h3 > a:hover {
+section#my-projects
+  > ol.project-list
+  > li.pl-project-item:hover
+  > :is(span, a.pl-pi-link) {
+  color: var(--secondary-color);
+}
+
+
+section#my-projects
+  > ol.project-list
+  > li.pl-project-item
+  > a.pl-pi-link
+  > h3.pl-pi-lnk-title {
+  font-weight: 300;
+  font-size: 2.5em;
+}
+
+section#my-projects
+  > ol.project-list
+  > li.pl-project-item
+  > a.pl-pi-link
+  > p.pl-pi-lnk-url
+  > small {
+  font-family: Montserrat;
+  color: var(--text-muted);
+  font-size: 1.875em;
+}
+
+section#my-projects
+  > ol.project-list
+  > li.pl-project-item:hover
+  > a.pl-pi-link
+  > p.pl-pi-lnk-url
+  > small {
   color: var(--secondary-color);
 }

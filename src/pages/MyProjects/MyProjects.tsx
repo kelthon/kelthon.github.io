@@ -2,22 +2,23 @@ import { projects } from '@services/data';
 import './MyProjects.css';
 
 function MyProjects() {
-  const projectList = projects.map((project) => {
+  const projectList = projects.map((project, index) => {
     return (
-      <li key={project.id}>
-        <h3>
-          <a href={project.url}>{project.title}</a>
-        </h3>
+      <li className="pl-project-item" key={project.id}>
+        <span className="pl-pi-counter">{index + 1}.</span>
+        <a className="pl-pi-link" href={project.url}>
+          <h3 className="pl-pi-lnk-title">{project.title}</h3>
+          <p className="pl-pi-lnk-url">
+            <small>{project.description}</small>
+          </p>
+        </a>
       </li>
     );
   });
 
   return (
     <section id="my-projects">
-      <header>
-        <h2>Featured Projects</h2>
-      </header>
-      <ol>{projectList}</ol>
+      <ol className="project-list">{projectList}</ol>
     </section>
   );
 }
