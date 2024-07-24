@@ -1,6 +1,5 @@
 main {
   display: flex;
-  overflow-y: scroll;
   flex-direction: column;
 }
 
@@ -8,4 +7,5 @@ main > div.container {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  scroll-snap-align: center;
 }
