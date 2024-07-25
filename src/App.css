@@ -1,11 +1,12 @@
 main {
   display: flex;
   flex-direction: column;
+  gap: 2rem;
 }
 
 main > div.container {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  scroll-snap-align: center;
+  scroll-snap-align: start;
 }

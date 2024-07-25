@@ -1,10 +1,10 @@
 section.message {
   display: flex;
   padding: 1rem 2rem;
-  color: var(--light-color);
+  color: var(--text-secondary);
   justify-content: space-between;
-  background-color: var(--tertiary-color);
-  border-bottom: 1px solid var(--light-color);
+  background-color: var(--background-secondary);
+  border-bottom: 1px solid var(--text-secondary);
 }
 
 section.message > article.msg-content {
@@ -19,7 +19,7 @@ section.message > article.msg-content > h2.msg-title {
 
 section.message > footer.msg-control > button.msg-close-btn {
   border: none;
-  color: var(--light-color);
+  color: var(--text-secondary);
   background-color: transparent;
 }
 section.message > footer.msg-control > button.msg-close-btn > svg {
@@ -27,13 +27,13 @@ section.message > footer.msg-control > button.msg-close-btn > svg {
 }
 
 section.message > footer.msg-control > button.msg-close-btn > svg:hover {
-  background-color: var(--light-color);
-  color: var(--tertiary-color);
+  background-color: var(--text-secondary);
+  color: var(--background-secondary);
 }
 
 section.message > footer.msg-control > button.msg-close-btn > svg:active {
   background-color: var(--danger-color);
-  color: var(--light-color);
+  color: var(--text-secondary);
 }
 
 @media screen and (max-width: 768px) {

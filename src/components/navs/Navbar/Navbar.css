@@ -14,7 +14,7 @@ nav#navbar > ul.nb-items > li.nb-item > ul.nb-group {
 
 nav#navbar > ul.nb-items > li.nb-item > ul.nb-group > li.nb-g-item > a.nb-link {
   font-size: 1.2rem;
-  color: var(--dark-color);
+  color: var(--text-color);
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -24,7 +24,7 @@ nav#navbar
   > li.nb-item#navbar-hidden-menu
   > ul.nb-group
   > li:is(.nb-g-item:hover, .nb-selected) {
-  border-block-end: 2px solid var(--dark-color);
+  border-block-end: 2px solid var(--text-color);
 }
 
 nav#navbar
@@ -32,7 +32,7 @@ nav#navbar
   > li.nb-item#navbar-hidden-menu
   > ul.nb-group
   > li.nb-g-item:hover {
-  border-color: var(--secondary-color);
+  border-color: var(--primary-color);
 }
 
 nav#navbar > ul.nb-items > li.nb-item > ul.nb-group > li.nb-g-item {
@@ -57,7 +57,7 @@ nav#navbar
   > ul.nb-group
   > li.nb-g-item:hover
   > :is(button, select, svg) {
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 nav#navbar > ul.nb-items > li.nb-item > ul.nb-group > li.nb-g-item > select {

@@ -12,22 +12,21 @@
   scroll-snap-type: y mandatory;
   font-family: Montserrat, sans-serif;
 
-  --text-color: #0D0D0D;
+  --primary-color: #8a038c;
+
+  --text-color: #0d0d0d;
   --text-muted: #9f9f9f;
-  --text-highlight: #9f9f9f;
+  --text-highlight: #8a038c;
   --background-color: #ffffff;
 
-  --primary-color: #EE05F2;
-  --secondary-color: #8A038C;
-  --tertiary-color: #580259;
-  --light-color: #F2D5F2;
-  --dark-color: #0D0D0D;
+  /* text-secondary and background-secondary are opposite of a current scheme color */
+  --text-secondary: #f2d5f2;
+  --background-secondary: #580259;
 
   --danger-color: red;
   --success-color: green;
   --info-color: blue;
   --warning-color: yellow;
-  
 }
 
 h1,

@@ -1,0 +1,26 @@
+div.float-container {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  div.float-container {
+    display: block;
+    position: absolute;
+    bottom: 0;
+  }
+
+  div.float-container > div.wrapper {
+    display: flex;
+    width: 100vw;
+    padding-bottom: 1rem;
+    justify-content: center;
+  }
+
+  div.float-container > div.wrapper > button {
+    border: none;
+    color: var(--text-secondary);
+    background-color: var(--primary-color);
+    border-radius: 100%;
+    padding: 1rem;
+  }
+}

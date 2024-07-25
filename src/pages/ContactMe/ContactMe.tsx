@@ -4,7 +4,10 @@ import './ContactMe.css';
 function ContactMe(): JSX.Element {
   return (
     <section id="contact-me">
-      <h2>You can contact me thought of channels below:</h2>
+      <h2>
+        You can contact me thought of{' '}
+        <span className="cm-text-highlight">channels</span> below:
+      </h2>
 
       <div className="container">
         <div className="contact-list">
