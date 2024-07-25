@@ -1,14 +1,15 @@
+import ScrollIndicator from '@buttons/ScrollIndicator/ScrollIndicator';
 import Message from '@cards/Message/Message';
 import { LanguageProvider } from '@hooks/language';
 import { ThemeProvider } from '@hooks/theme';
 import Navbar from '@navs/Navbar/Navbar';
 import AboutMeSection from '@pages/AboutMe/AboutMe';
+import ContactMe from '@pages/ContactMe/ContactMe';
 import Projects from '@pages/MyProjects/MyProjects';
 import { messages } from '@services/data';
 import { ColorScheme, Language } from '@utils/properties';
 import { useState } from 'react';
 import './App.css';
-import ContactMe from '@pages/ContactMe/ContactMe';
 
 function App() {
   const [theme, setTheme] = useState<ColorScheme>(ColorScheme.Light);
@@ -18,8 +19,9 @@ function App() {
     <ThemeProvider value={{ theme, setTheme }}>
       <LanguageProvider value={{ language, setLanguage }}>
         <main>
+          <ScrollIndicator />
           <div className="container">
-            <aside className='messages'>
+            <aside className="messages">
               <Message
                 title={messages[0].title}
                 message={messages[0].message!}
