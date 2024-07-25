@@ -14,31 +14,31 @@ section#my-projects > ol.project-list {
 }
 
 section#my-projects > ol.project-list > li.pl-project-item {
-  display: flex;
+  display: grid;
+  grid-template-columns: 3em 1fr 1em;
   align-items: center;
-  justify-content: flex-end;
-  padding-inline-end: 1em;
   gap: 1rem;
+  padding-inline: 1rem;
+  transition: 0.2s border;
+  border-inline-start: 5px solid transparent;
 }
 
 section#my-projects > ol.project-list > li.pl-project-item:hover {
-  margin-inline-start: 1em;
-  background-color: var(--text-secondary);
-  border-inline-start: 0.5em solid var(--primary-color);
+  border-inline-start: 5px solid var(--primary-color);
+  box-shadow: 0 0 3px var(--text-muted);
 }
 
-section#my-projects
-  > ol.project-list
-  > li.pl-project-item
-  > span.pl-pi-counter {
+section#my-projects > ol.project-list > li.pl-project-item > p.pl-pi-counter {
   font-weight: 700;
   font-size: 3em;
   font-family: Inter;
   padding-inline-start: 0.1em;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
 }
 
 section#my-projects > ol.project-list > li.pl-project-item > a.pl-pi-link {
-  flex: 1;
   font-size: 1rem;
   font-weight: 400;
   text-decoration: none;
@@ -52,6 +52,15 @@ section#my-projects
   > h3.pl-pi-lnk-title {
   font-weight: 300;
   font-size: 1.5em;
+}
+
+section#my-projects
+  > ol.project-list
+  > li.pl-project-item
+  > a.pl-pi-link
+  > h3.pl-pi-lnk-title
+  > span:last-child {
+  display: none;
 }
 
 section#my-projects
@@ -72,25 +81,34 @@ section#my-projects
   color: var(--text-color);
 }
 
+section#my-projects > ol.project-list > li.pl-project-item > span > svg {
+  visibility: hidden;
+}
+
+section#my-projects > ol.project-list > li.pl-project-item:hover > span > svg {
+  visibility: visible;
+}
+
 @media screen and (max-width: 768px) {
   section#my-projects {
     padding: 1rem;
+    align-items: space-evenly;
   }
 
   section#my-projects > ol.project-list {
     flex-flow: row wrap;
-  }
-
-  section#my-projects > ol.project-list > li.pl-project-item {
-    flex-flow: row wrap;
-    align-items: start;
     gap: 0.5rem;
   }
 
-  section#my-projects
-    > ol.project-list
-    > li.pl-project-item
-    > span.pl-pi-counter {
+  section#my-projects > ol.project-list > li.pl-project-item {
+    padding: 0;
+    grid-template-columns: 1.5em 1fr;
+    align-items: start;
+    height: fit-content;
+    gap: 0.5rem;
+  }
+
+  section#my-projects > ol.project-list > li.pl-project-item > p.pl-pi-counter {
     font-size: 1.5em;
     font-weight: 500;
   }
@@ -106,14 +124,32 @@ section#my-projects
     > h3.pl-pi-lnk-title {
     font-size: 1.5em;
     font-weight: 500;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    gap: 0.5rem;
   }
 
   section#my-projects
     > ol.project-list
     > li.pl-project-item
     > a.pl-pi-link
-    > small.pl-pi-lnk-description {
-    font-size: 1.125rem;
-    text-align: justify;
+    > h3.pl-pi-lnk-title
+    > span:last-child {
+    display: inline;
+    color: var(--text-muted);
+  }
+
+  section#my-projects
+    > ol.project-list
+    > li.pl-project-item
+    > a.pl-pi-link
+    > h3.pl-pi-lnk-title
+    > span:last-child > svg {
+    width: 1em;
+  }
+
+  section#my-projects > ol.project-list > li.pl-project-item > span {
+    display: none;
   }
 }

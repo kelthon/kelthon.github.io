@@ -44,6 +44,7 @@ section#contact-me > div.container > div.contact-list > p.wrapper > a {
   color: var(--text-color);
   text-decoration: none;
   font-size: 1.5rem;
+  font-family: monospace;
 }
 
 section#contact-me > div.container > div.contact-list > p.wrapper > svg {
@@ -51,9 +52,23 @@ section#contact-me > div.container > div.contact-list > p.wrapper > svg {
   height: 3rem;
 }
 
+section#contact-me > div.container > div.contact-list > p.wrapper > a > svg {
+  visibility: hidden;
+  color: var(--text-highlight);
+}
+
 section#contact-me > div.container > div.contact-list > p.wrapper:hover > a {
-  text-decoration: underline dashed var(--primary-color);
+  text-decoration: underline var(--primary-color);
   text-underline-offset: 0.5em;
+}
+
+section#contact-me
+  > div.container
+  > div.contact-list
+  > p.wrapper
+  > a:hover
+  > svg {
+  visibility: visible;
 }
 
 @media screen and (max-width: 768px) {
@@ -62,6 +77,7 @@ section#contact-me > div.container > div.contact-list > p.wrapper:hover > a {
   }
 
   section#contact-me > h2 {
+    font-weight: 400;
     font-size: 1.125rem;
   }
 
@@ -72,5 +88,12 @@ section#contact-me > div.container > div.contact-list > p.wrapper:hover > a {
   section#contact-me > div.container > div.contact-list > p.wrapper > svg {
     width: 1.5rem;
     height: 1.5rem;
+  }
+
+  section#contact-me > div.container > div.contact-list > p.wrapper > a > svg {
+    visibility: visible;
+    color: var(--text-muted);
+    width: 1rem;
+    height: 1rem;
   }
 }
