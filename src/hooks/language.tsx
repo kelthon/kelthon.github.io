@@ -3,7 +3,7 @@ import {
   LanguageObject,
   Language,
   LanguageProviderProps,
-} from '../utils/properties';
+} from '@utils/properties';
 
 export const LanguageContext = createContext<LanguageObject>({
   language: Language.English,

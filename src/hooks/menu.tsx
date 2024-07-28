@@ -1,5 +1,5 @@
 import { createContext, useContext } from 'react';
-import { MenuObject, MenuProviderProps } from '../utils/properties';
+import { MenuObject, MenuProviderProps } from '@utils/properties';
 
 export const MenuContext = createContext<MenuObject>({
   menu: {
