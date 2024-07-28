@@ -1,8 +1,13 @@
-import { projects } from '@services/data';
-import './MyProjects.css';
+import useLanguage from '@hooks/language';
 import { RiExternalLinkFill } from '@remixicon/react';
+import Translations from '@services/data';
+import './MyProjects.css';
 
 function MyProjects() {
+  const { language } = useLanguage();
+
+  const projects = Translations.get(language)!.myProjects;
+
   const projectList = projects.map((project, index) => {
     return (
       <li className="pl-project-item" key={project.id}>
@@ -27,7 +32,7 @@ function MyProjects() {
   });
 
   return (
-    <section id="my-projects">
+    <section id="my-projects" lang={language}>
       <ol className="project-list">{projectList}</ol>
     </section>
   );

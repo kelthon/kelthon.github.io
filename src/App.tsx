@@ -6,7 +6,7 @@ import Navbar from '@navs/Navbar/Navbar';
 import AboutMeSection from '@pages/AboutMe/AboutMe';
 import ContactMe from '@pages/ContactMe/ContactMe';
 import Projects from '@pages/MyProjects/MyProjects';
-import { messages } from '@services/data';
+import Translations from '@services/data';
 import { ColorScheme, Language } from '@utils/properties';
 import { useState } from 'react';
 import './App.css';
@@ -14,6 +14,8 @@ import './App.css';
 function App() {
   const [theme, setTheme] = useState<ColorScheme>(ColorScheme.Light);
   const [language, setLanguage] = useState<Language>(Language.English);
+
+  const messages = Translations.get(language)!.messages
 
   return (
     <ThemeProvider value={{ theme, setTheme }}>

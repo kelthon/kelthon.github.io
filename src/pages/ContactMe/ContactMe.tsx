@@ -1,18 +1,28 @@
+import useLanguage from '@hooks/language';
 import {
   RiExternalLinkFill,
   RiGithubFill,
   RiLinkedinBoxFill,
   RiMailFill,
 } from '@remixicon/react';
+import Translations from '@services/data';
 import './ContactMe.css';
 
 function ContactMe(): JSX.Element {
+  const { language } = useLanguage();
+  const content = Translations.get(language)!.contactMe.map((text, index) => {
+    return index % 2 === 0 ? (
+      <span key={index}>{text}</span>
+    ) : (
+      <span key={index} className="cm-text-highlight">
+        {' ' + text + ' '}
+      </span>
+    );
+  });
+
   return (
     <section id="contact-me">
-      <h2>
-        You can contact me thought of{' '}
-        <span className="cm-text-highlight">channels</span> below:
-      </h2>
+      <h2>{content}</h2>
 
       <div className="container">
         <div className="contact-list">

@@ -1,4 +1,6 @@
+import useLanguage from '@hooks/language';
 import FallbackImage from '@images/FallbackImage/FallbackImage';
+import Translations from '@services/data';
 import { useEffect, useState } from 'react';
 import './AboutMe.css';
 
@@ -7,25 +9,28 @@ function handleImageSize() {
 }
 
 function AboutMeSection(): JSX.Element {
+  const { language } = useLanguage();
+  const aboutMe = Translations.get(language)!.aboutMe;
   const [imageSize, setImageSize] = useState<string>(handleImageSize());
+  const description = aboutMe.description.map((text, index) => {
+    return index % 2 === 0 ? (
+      <span key={index}>{text}</span>
+    ) : (
+      <b key={index} className="highlight">
+        {' ' + text + ' '}
+      </b>
+    );
+  });
 
   useEffect(() => {
     window.addEventListener('resize', () => setImageSize(handleImageSize()));
-  }, []);
+  });
 
   return (
     <section id="about-me">
       <header>
-        <h2>Hello, World!</h2>
-        <p>
-          I'm Kelthon Alves, a full-stack web developer, I leverage{' '}
-          <b className="highlight">TypeScript</b> and{' '}
-          <b className="highlight">React </b>to craft engaging web user
-          experiences. My focus lies in developing responsive and accessible
-          interfaces, which are seamlessly integrated with{' '}
-          <b className="highlight">AWS </b>to deliver an optimized user
-          experience.
-        </p>
+        <h2>{aboutMe.title}</h2>
+        <p>{description}</p>
       </header>
       <footer className="photo-wrapper">
         <p>
