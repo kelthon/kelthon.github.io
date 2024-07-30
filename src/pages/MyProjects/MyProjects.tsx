@@ -32,7 +32,7 @@ function MyProjects() {
   });
 
   return (
-    <section id="my-projects" lang={language}>
+    <section id="my-projects">
       <ol className="project-list">{projectList}</ol>
     </section>
   );
