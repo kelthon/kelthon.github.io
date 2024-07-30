@@ -12,15 +12,18 @@ import { useState } from 'react';
 import './App.css';
 
 function App() {
-  const [theme, setTheme] = useState<ColorScheme>(ColorScheme.Light);
   const [language, setLanguage] = useState<Language>(Language.English);
-
-  const messages = Translations.get(language)!.messages
+  const messages = Translations.get(language)!.messages;
+  const [theme, setTheme] = useState<ColorScheme>(
+    window.matchMedia('(prefers-color-scheme: dark)').matches
+      ? ColorScheme.Dark
+      : ColorScheme.Light,
+  );
 
   return (
     <ThemeProvider value={{ theme, setTheme }}>
       <LanguageProvider value={{ language, setLanguage }}>
-        <main>
+        <main className={`theme-${theme}` } lang={language}>
           <ScrollIndicator />
           <div className="container">
             <aside className="messages">

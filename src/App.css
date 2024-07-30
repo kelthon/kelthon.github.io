@@ -1,7 +1,29 @@
+main.theme-light {
+  --primary-color: #8a038c;
+  --text-color: #0d0d0d;
+  --text-muted: #9f9f9f;
+  --text-highlight: #8a038c;
+  --background-color: #ffffff;
+  --text-secondary: #f2d5f2;
+  --background-secondary: #580259;
+}
+
+main.theme-dark {
+  --primary-color: #8a038c;
+  --text-color: #ffffff;
+  --text-muted: #9f9f9f;
+  --text-highlight: #8a038c;
+  --background-color: #0f0f0f;
+  --text-secondary: #f2d5f2;
+  --background-secondary: #580259;
+}
+
 main {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  color: var(--text-color);
+  background-color: var(--background-color);
 }
 
 main > div.container {

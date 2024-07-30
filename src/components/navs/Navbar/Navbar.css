@@ -55,6 +55,15 @@ nav#navbar
   > ul.nb-items
   > li.nb-item
   > ul.nb-group
+  > li.nb-g-item
+  > :is(button, select, svg) {
+    color: var(--text-color);
+  }
+
+nav#navbar
+  > ul.nb-items
+  > li.nb-item
+  > ul.nb-group
   > li.nb-g-item:hover
   > :is(button, select, svg) {
   color: var(--primary-color);
