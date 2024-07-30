@@ -47,36 +47,36 @@ const Translations: Map<Language, LanguageContent> = new Map([
       },
       myProjects: [
         {
+          id: 5,
+          title: 'Web chat UI (only html, css and JS)',
+          description: 'A landing page of a webchat inspired on WhatsApp',
+          url: 'https://kelthon.github.io/webchat',
+        },
+        {
           id: 1,
-          title: 'Ecommerce UI',
+          title: 'Ecommerce UI (only html, css and JS)',
           description:
             'A landing page of a ecommerce inspired a public template',
-          url: 'https://github.com/kelthon/e-commerce',
+          url: 'https://kelthon.github.io/e-commerce/public',
         },
         {
           id: 2,
-          title: 'Furniture Ecommerce (API)',
+          title: 'Furniture Ecommerce (API) (in Development)',
           description: 'A complete back end for a furniture ecommerce app',
           url: 'https://github.com/kelthon/ecommerce-challenge-api',
         },
         {
           id: 3,
-          title: 'Furniture Ecommerce (APP)',
+          title: 'Furniture Ecommerce (APP) (in Development)',
           description: 'A complete front end for a furniture ecommerce app',
           url: 'https://github.com/kelthon/ecommerce-challenge-app',
         },
         {
           id: 4,
-          title: 'Data Structure Viewer',
+          title: 'Data Structure Viewer (in Development)',
           description:
             'A app to analise, build and view data structures algorithms',
           url: 'https://github.com/kelthon/dsv',
-        },
-        {
-          id: 5,
-          title: 'Web chat UI',
-          description: 'A landing page of a webchat inspired on WhatsApp',
-          url: 'https://github.com/kelthon/webchat',
         },
       ],
       contactMe: ['You can contact me thought of', 'channels', 'below:'],
@@ -112,38 +112,38 @@ const Translations: Map<Language, LanguageContent> = new Map([
       },
       myProjects: [
         {
+          id: 5,
+          title: 'Web chat UI (apenas html, css and JS)',
+          description: 'Uma landing page de um webchat inspirado no WhatsApp',
+          url: 'https://github.com/kelthon/webchat',
+        },
+        {
           id: 1,
-          title: 'Ecommerce UI',
+          title: 'Ecommerce UI (apenas html, css and JS)',
           description:
             'Uma landing page de um ecommerce inspirado em um template público',
           url: 'https://github.com/kelthon/e-commerce',
         },
         {
           id: 2,
-          title: 'Furniture Ecommerce (API)',
+          title: 'Furniture Ecommerce (API) (Em desenvolvimento)',
           description:
             'Um back end completo de um aplicativo ecommerce de móveis',
           url: 'https://github.com/kelthon/ecommerce-challenge-api',
         },
         {
           id: 3,
-          title: 'Furniture Ecommerce (APP)',
+          title: 'Furniture Ecommerce (APP) (Em desenvolvimento)',
           description:
             'Um front end completo de um aplicativo ecommerce de móveis',
           url: 'https://github.com/kelthon/ecommerce-challenge-app',
         },
         {
           id: 4,
-          title: 'Data Structure Viewer',
+          title: 'Data Structure Viewer (Em desenvolvimento)',
           description:
             'Um aplicativo par análise, construção e visualização de algoritmos de estruturas de dados',
           url: 'https://github.com/kelthon/dsv',
-        },
-        {
-          id: 5,
-          title: 'Web chat UI',
-          description: 'Uma landing page de um webchat inspirado no WhatsApp',
-          url: 'https://github.com/kelthon/webchat',
         },
       ],
       contactMe: ['Você pode me contatar através dos', 'canais', 'abaixo:'],

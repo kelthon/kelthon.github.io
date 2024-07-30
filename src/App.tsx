@@ -14,16 +14,12 @@ import './App.css';
 function App() {
   const [language, setLanguage] = useState<Language>(Language.English);
   const messages = Translations.get(language)!.messages;
-  const [theme, setTheme] = useState<ColorScheme>(
-    window.matchMedia('(prefers-color-scheme: dark)').matches
-      ? ColorScheme.Dark
-      : ColorScheme.Light,
-  );
+  const [theme, setTheme] = useState<ColorScheme>(ColorScheme.Light);
 
   return (
     <ThemeProvider value={{ theme, setTheme }}>
       <LanguageProvider value={{ language, setLanguage }}>
-        <main className={`theme-${theme}` } lang={language}>
+        <main className={`theme-${theme}`} lang={language}>
           <ScrollIndicator />
           <div className="container">
             <aside className="messages">
